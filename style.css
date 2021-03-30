@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.grid {
+	position: relative;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: repeat(20, 20px);
+	grid-template-rows: repeat(20, 20px);
+	justify-content: center;
+	font-size: 10px;
+}
+.grid div {
+	text-align: center;
+	background-color: rgb(212, 212, 212);
+	border: outset;
+}
+.grid .checked {
+	font-weight: bold;
+	font-size: 1.5em;
+	background-color: rgb(167, 167, 167);
+	border: white solid 1px;
+}
+.btn-reset {
+	display: block;
+	padding: 10px;
+	margin: 10px auto;
+	grid-column: 9 / span 4;
+	height: 3em;
+	text-align: center;
+	font-size: 1.5em;
+	border-radius: 15px;
+	border: 1px solid rgb(167, 167, 167) outset;
+	cursor: pointer;
+}
+.btn-reset:hover {
+	background-color: rgb(167, 167, 167);
+	color: white;
+	border: 1px solid white;
+}
+.btn-reset:focus {
+	outline: none;
+}
+.grid .message-result {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 200px;
+	width: 350px;
+	top: 100px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 3em;
+	font-weight: bold;
+	background-color: rgba(255, 255, 255, 0.75);
+	border-radius: 15px;
+	border: none;
+}
+.grid p {
+	font-size: 0.8em;
+}
+.grid i {
+	font-size: 3em;
+}
+.grid .fa-dizzy {
+	color: rgb(138 30 30);
+}
+.grid .fa-grin-beam {
+	color: rgb(30 138 30);
+}
+.close-result {
+	display: block;
+	padding: 10px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 0.4em;
+	border-radius: 15px;
+	border: 1px solid rgb(167, 167, 167) outset;
+	cursor: pointer;
+}
+.close-result:hover {
+	background-color: rgb(167, 167, 167);
+	border: 1px solid white;
+	color: white;
+}
+.close-result:focus {
+	outline: none;
+}
+
+@media (max-width: 600px) {
+	.grid {
+		grid-template-columns: repeat(20, 15px);
+		grid-template-rows: repeat(20, 15px);
+		font-size: 8px;
+	}
+	.grid .message-result {
+		height: 150px;
+		width: 275px;
+		top: 75px;
+	}
+}
